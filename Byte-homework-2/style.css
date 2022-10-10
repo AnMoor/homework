@@ -1,6 +1,7 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+
 .container{
     max-width: 1300px;
     margin: 0 auto;
@@ -13,6 +14,14 @@ body{
 .nav-ul{
     text-align: center;
 }
+
+.nav-link:hover, .nav-link:focus{
+    color:rgba(92,152,171);
+}
+
+/* .nav-link:focus{
+    color: rgb(14, 50, 210);
+} */
 
 .nav-li{
     display: inline-block;
@@ -60,9 +69,12 @@ body{
     cursor: pointer;
 }
 
+.main-button:hover, .main-button:focus{
+    background : rgba(92,152,171, 0.9);
+    color: #FFFFFF;
+}
+
 .description{
-    max-width: 1300px;
-    height: 500px;
     background-color: rgba(92,152,171, 0.8);;    
 }
 
@@ -70,6 +82,7 @@ body{
     font-weight: 400;
     font-size: 36px;
     line-height: 49px;
+    text-align: center;
     color: #FFFFFF;
     max-width: 726px; 
     margin: 0 auto;   
