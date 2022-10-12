@@ -1,0 +1,225 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.header{
+    margin: 53px 0 52px;
+}
+
+.nav-ul{
+    text-align: center;
+}
+
+.nav-link:hover, .nav-link:focus{
+    color:rgba(92,152,171);
+}
+
+/* .nav-link:focus{
+    color: rgb(14, 50, 210);
+} */
+
+.nav-li{
+    display: inline-block;
+}
+
+.nav-li:not(:last-of-type){
+    margin-right: 47px;
+}
+
+.nav-link{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(25/18);
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+}
+
+.main{
+    text-align: center;
+    background-image: url(./images/pexels-harrison-candlin-2441454\ 1.jpg);
+    background-repeat: no-repeat;
+}
+
+.main-title{
+    font-weight: 700;
+    font-size: 72px;
+    line-height: calc(98/72);
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 138px;
+}
+
+.main-button{
+    width: 420px;
+    height: 70px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: #162C38;
+    border: none;
+    margin: 14px 0 180px;
+    cursor: pointer;
+}
+
+.main-button:hover, .main-button:focus{
+    background : rgba(92,152,171, 0.9);
+    color: #FFFFFF;
+}
+
+.description{
+    background-color: rgba(92,152,171, 0.8);;    
+}
+
+.description-text{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 726px; 
+    margin: 0 auto;   
+    padding: 133px 0;
+}
+
+.section-square{
+    max-width: 1440px;
+    position: relative; 
+    margin: 100px auto; 
+}
+
+.square{
+    width: 178px;
+    height: 121px;
+    background: #BFDEFB;
+    position: absolute;
+    left: 0px;
+}
+
+.square2{
+    width: 178px;
+    height: 121px;
+    background: #BFDEFB;
+    position: absolute;
+    top: 346px;
+    left: 0px;
+}
+
+.square3{
+    width: 178px;
+    height: 121px;
+    background: #BFDEFB;
+    position: absolute;
+    top: 235px;
+    left: 1262px;
+}
+
+.text{
+    max-width: 696px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #000000;
+    position: absolute;
+    top: 221px;
+    left: 364px;
+}
+
+.section-circle{
+    width: 1440px;
+    position: relative; 
+    margin: 627px auto; 
+}
+
+.circle{
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background: #5C98AB;
+    border-radius: 50%;
+    top: 160px;
+    left: 330px;
+}
+.circle2{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: #BFDEFB;
+    border-radius: 50%;
+    top: 375px;
+    left: 1088px;
+}
+
+.text2{
+    max-width: 696px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #000000;
+    position: absolute;
+    top: 216px;
+    left: 370px;
+}
+
+.form-section{
+max-width: 647px;
+margin: 1186px auto;
+}
+
+.form-button{
+    width: 100%;
+    height: 92px;
+    background: #5C98AB;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(49/36);
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+
+}
+
+.form-input{
+    position: relative;
+    margin-bottom: 41px;
+
+}
+
+.label{
+position: absolute;
+left: 31px;
+top: 14px;
+font-weight: 300;
+font-size: 14px;
+line-height: calc(19/14);
+color: #000000;
+}
+
+.input{
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 33px 0 14px 31px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 36px;
+    line-height:calc(49/36);
+    color: #000000;
+}
+
+.input::placeholder{
+    font-weight: 400;
+    font-size: 36px;
+    line-height:calc(49/36);
+    color: #000000;    
+}
