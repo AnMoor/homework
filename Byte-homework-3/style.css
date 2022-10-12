@@ -74,7 +74,6 @@ body{
 
 .description{
     background-color: rgba(92,152,171, 0.8); 
-
 }
 
 .description-text{
@@ -84,14 +83,12 @@ body{
     text-align: center;
     color: #FFFFFF;
     max-width: 726px; 
-    /* margin: 133px auto; */
-    padding: 130px 274px 134px 300px;
+    margin: 0px auto;
+    padding: 130px 0 134px;
 }
 
 .div-square{
-    max-width: 1440px;
     position: relative; 
-    margin: 0 auto;
 }
 
 .section-square{
