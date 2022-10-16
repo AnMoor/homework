@@ -76,6 +76,19 @@ body{
     background-color:#F3C6BD;
 }
 
+.title{
+    margin-bottom: 70px;
+}
+
+.text{
+    margin-bottom: 34px;
+}
+
+.image{
+    margin-bottom: 77px;
+    margin-left: -300px;
+}
+
 .main-title{
     width: 754px;
     height: 165px;
@@ -84,7 +97,6 @@ body{
     line-height: 78px;
     letter-spacing: -0.5px;
     color: #2B292D;
-    margin: 76px 0 34px;
 }
 
 .main-text{
@@ -99,19 +111,30 @@ body{
     display: flex;
     justify-content: left;
     gap: 10px;
-    margin-bottom: 126px;
+    margin-bottom: 58px;
+}
+
+#main, #second{
+    position: relative;
+}
+#main{
+    z-index: 2;
+}
+
+#second{
+    z-index: 1;
 }
 
 .section-visitor{
     margin: 0 auto;
-    background-color: rgba(0, 161, 198, 1);
+    background-color: rgba(0, 161, 198, 0.1);
 }
 
 .visitor-title{
     font-size: 22px;
     line-height: 1.55;
     text-align: center;
-    color: #2B292D;
+    color:  #2B292D;;
     padding-top: 108px;
 }
 
@@ -159,8 +182,9 @@ body{
 
 .button-main:hover{
     background: #1528db;
-    transition: 0.5s;
+    transition: 0.6s;
 }
+
 .visitor-ul-button{ 
     display: flex;
     justify-content:center;
@@ -179,32 +203,26 @@ body{
     border-radius: 2px;
     border: none;
     cursor: pointer;
+    transition: 0.6s;
 }
 
-/* .visitor-ul{
-    display: flex;
-    justify-content:center;
-    gap: 31px;
-
-} */
-
 .visitor-li{
-    width: 262px;
-    height: 300px;
+    /* width: 262px;
+    height: 300px; */
     background-color: #FFFFFF;
     border-radius: 8px;
+    text-align: center;
     cursor: pointer;
     margin-bottom: 110px;
 }
 
 .visitor-li:hover{
     background-color: #3040C4;
-    color: #FFFFFF;
-
+    transition: 0.6s;
 }
 
 .visitor-image{
-padding: 22px 62px 22px;
+    padding: 22px 0px;
 }
 
 .visitor-p{
@@ -213,12 +231,16 @@ padding: 22px 62px 22px;
     line-height: 1.27;
     text-align: center;
     color: #2B292D;
-    padding: 22px auto 33px;
+    margin-bottom: 33px;
+}
+
+.visitor-p:hover{
+    color: #FFFFFF;
+    transition: 0.8s;
 }
 
 .section-grid{
-       margin: 90px auto; 
-
+    margin: 90px auto; 
 }
 
 .grid-title{
@@ -228,7 +250,6 @@ padding: 22px 62px 22px;
     line-height: 66px;
     color: #000000;
     margin: 0 auto;
-
 }
 
 .grid-text{
@@ -239,7 +260,6 @@ padding: 22px 62px 22px;
     text-align: center;
     color: #172342;
     margin: 26px auto 97px;
-
 }
 
 .visitor-grid{
@@ -251,20 +271,20 @@ padding: 22px 62px 22px;
 
 .grid{
     display: grid;
-    gap: 42px;
-    grid-template-columns: repeat(3, 347px);
-    grid-template-rows: repeat(3,  208px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 49.52px;
+    row-gap: 41px;
 }
 
 .photo{
-    background-color: #420b6e;
     border-radius: 8px;
 }
 
 .photo:nth-child(3), .photo:nth-child(4){
     grid-row: span 2;
 }
- .photo1{
+ /* .photo1{
     background-image: url(../images/sections/apple.jpg);
  }
 
@@ -281,7 +301,7 @@ padding: 22px 62px 22px;
  }
 
  .photo5{
-    background-image: url(../images/sections/smartphon.jpg);
+    background-image: url(../images/sections/smartphone.jpg);
  }
 
  .photo6{
@@ -290,4 +310,4 @@ padding: 22px 62px 22px;
 
  .photo7{
     background-image: url(../images/sections/dog.jpg);
- }
+ } */
