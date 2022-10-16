@@ -125,6 +125,31 @@ body{
     z-index: 1;
 }
 
+.section-about{
+    background-color: rgba(0, 161, 198, 0.1) ;
+}
+
+.about-ul{
+    padding: 77px 0 76px;
+}
+
+.about-title, .for-title{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.45;
+    color: #2B292D;
+
+}
+
+.about-text, .for-text{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.45;
+    color: #2B292D;
+
+}
+
+
 .section-visitor{
     margin: 0 auto;
     background-color: rgba(0, 161, 198, 0.1);
