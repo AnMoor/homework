@@ -254,13 +254,8 @@ border-bottom: 1px solid #2B292D;
 }
 
 .futures-title-open{
-    font-weight: 900;
-    font-size: 22px;
-    line-height: 1.18;
-    margin-left: 15px;
     color: #3142C6;
 }
-
 
 .futures-block-text{
     font-size: 18px;
@@ -274,7 +269,7 @@ border-bottom: 1px solid #2B292D;
     font-weight: 900;
     font-size: 22px;
     line-height: 1.18;
-    color: #2B292D;
+    /* color: #2B292D; */
     margin-left: 15px;
 }
 
