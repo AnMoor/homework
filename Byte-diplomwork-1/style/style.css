@@ -13,6 +13,20 @@ body{
     margin: 0 auto;
 }
 
+.check{
+    width: 30px;
+    height: 3px;
+    background-color: #2B292D;
+}
+
+.check:not(:last-of-type){
+    margin-bottom: 4px;
+}
+
+.checkbox, .check-wrapper{
+    display: none;
+}
+
 .flex{
     display: flex;
     justify-content: space-between;
@@ -122,16 +136,22 @@ body{
 
 .main{
     background-color:#F3C6BD;
+    position: relative;
+    padding-bottom: 126px;
 }
 
-.main-image{
-    margin-bottom: 77px;
-    margin-left: -300px;
+.main-container > div:first-of-type{
+    z-index: 1;
+}
+
+.main-container > div:last-of-type{
+    z-index: 0;
+    position: absolute;
+    right: 25px;
 }
 
 .main-title{
     width: 754px;
-    /* height: 165px; */
     font-weight: bold;
     font-size: 80px;
     line-height: 78px;
@@ -154,17 +174,6 @@ body{
     justify-content: left;
     gap: 10px;
     margin-bottom: 58px;
-}
-
-#main, #second{
-    position: relative;
-}
-#main{
-    z-index: 2;
-}
-
-#second{
-    z-index: 1;
 }
 
 .about{
@@ -196,7 +205,6 @@ body{
 .corporation-grid{
     text-align: center;
 }
-
 
 .futures{
     position: relative;
@@ -231,78 +239,54 @@ body{
     margin-bottom: 39px;
 }
 
-.flex-futures{
+.futures-block-flex{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 21px;
 }
 
-.flex-futures-block{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 8px;
-    padding: 20px 0 22px;
+.futures-subblock{
+margin-bottom: 21px;
+border-bottom: 1px solid #2B292D;
 }
 
-.futures-acquire{
-    border-bottom: 5px solid #3142C6;;
+.futures-block-open{
+    border-bottom: 3px solid #3142C6;
 }
 
-.futures-acquire-title{
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 1.18;
-    color: #3142C6;
-    margin-left: 15px;
-}
-
-.futures-acquire-text{
+.futures-block-text{
     font-size: 18px;
     line-height: 1.44;
     color: #2B292D;
     margin-bottom: 20px;
+    display: none;
 }
 
-.futures-engage{
+.futures-block-title{
     font-weight: 900;
     font-size: 22px;
     line-height: 1.18;
     color: #2B292D;
     margin-left: 15px;
-    text-decoration: none;
-    cursor: pointer;
 }
 
-.futures-develop{
-    font-weight: 900;
-    font-size: 22px;
-    line-height: 1.18;
-    color: #2B292D;
-    margin-left: 15px;
-    text-decoration: none;
-}
-
-.future-image-leftside{
+.futures-image-leftside{
     position: absolute;
     left: 0px;
     top: 258px;
 }
 
-.future-image{
+.futures-image{
     align-items: baseline;
 }
-
-
-
 
 .team{
     background-color: rgba(252, 240, 227, .4);
     padding: 117px 0 116px;
 }
     
-    .info-pretitle{
+.info-pretitle{
     font-weight: bold;
     font-size: 22px;
     line-height: 1.55;
@@ -376,12 +360,72 @@ body{
     padding: 108px 0 110px;
 }
 
+.communicate{
+    padding: 110px 0 105px;
+}
+
+.communicate-title{
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 1.55;
+    color: #0189D1;
+    margin-bottom: 24px;
+}
+
+.communicate-posttitle{
+    max-width: 462px;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 1.0;
+    letter-spacing: -0.5px;
+    color: #2B292D;
+    margin-bottom: 30px;
+}
+
+.communicate-text{
+    max-width: 462px;
+    font-size: 24px;
+    line-height: 1.42;
+    color: #2B292D;
+    margin-bottom: 39px;
+}
+
+.communicate-image{
+    margin-right: 63px;
+    padding-bottom: 105px;
+}
+
+.communicate-block{
+    max-width: 360px;
+    justify-content: space-between;
+}
+
+.communicate-block-text{
+    font-size: 18px;
+    line-height: 1.44;
+    color: #2B292D;
+    margin-bottom: 10px;
+}
+
+.communicate-span{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.44;
+    color: #2B292D;
+}
+
+.communicate-block-link{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.44;
+    text-decoration-line: underline;
+    color: #3040C4;
+}
 .visitor-title{
     font-size: 22px;
     line-height: 1.55;
     text-align: center;
     color:  #2B292D;;
-    /* padding-top: 108px; */
 }
 
 .visitor-main{
@@ -424,7 +468,6 @@ body{
     grid-template-columns: repeat(4, 262px);
     gap: 30px;
     justify-content:center;
-    /* margin-bottom: 110px; */
 }
 
 .visitor-block{
@@ -455,6 +498,133 @@ body{
 .visitor-p:hover{
     color: #FFFFFF;
     transition: 0.8s;
+}
+
+.slider{
+    position: relative;
+}
+
+.slider-title{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.25;
+    text-align: center;
+    color: #3142C6;
+    margin-bottom: 28px;
+}
+
+.slider-text{
+    max-width: 750px;
+    font-size: 24px;
+    line-height: 1.42;
+    text-align: center;
+    color: #2B292D;
+    margin: 0 auto 34px;
+}
+
+.slider-block{
+    max-width: 225px;
+    margin: 0 auto 113px;
+}
+
+.slider-person{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #2B292D;
+}
+
+.slider-work{
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #2B292D;
+}
+
+.slider-image{
+    position: absolute;
+    top: 112px;
+    right: 26px;
+}
+
+.hiring{
+    padding: 106px 0 90px;
+}
+
+.hiring-div{
+    text-align: center;
+}
+.hiring-title{
+    max-width: 555px;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 1.0;
+    letter-spacing: -0.5px;
+    color: #2B292D;
+    margin: 0 auto 20px;
+}
+
+.hiring-title-text{
+    max-width: 555px;
+    font-size: 24px;
+    line-height: 1.42;
+    color: #2B292D;
+    margin: 0 auto 28px;
+}
+
+.hiring-button{
+    width: 247px;
+    height: 48px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    color: #FFFFFF;
+    background-color: rgba(48, 64, 196, 1);
+    margin-bottom: 63px;
+    border: none;
+}
+
+.hiring-about{
+    max-width: 750px;
+    margin: 0 auto 20px;
+    box-sizing: border-box;
+    padding: 26px 25px;
+    border: 2px solid rgba(43, 41, 45, 0.2);
+    border-radius: 8px;
+}
+
+.hiring-pretitle{
+    width: 400px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 1.27;
+}
+
+.hiring-pretitle-text{
+    font-size: 18px;
+    line-height: 1.33;
+}
+
+.hiring-text{
+    max-width: 410px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.44;
+    margin-top: 4px;
+    display: none;
+}
+
+.hiring-rotate-icon{
+    transform: rotate(90deg);
+    transition: 300ms;
+}
+
+.change-color{
+    color: #FFFFFF;
+    background-color: rgba(49, 65, 197, 1);
+    border: 2px solid rgba(49, 65, 197, 1);
+    transition: 300ms;
 }
 
 .grid{
@@ -549,7 +719,6 @@ body{
     justify-content: space-between;
 }
 
-
 .flex-block{
     display: flex;
     align-items: flex-start;
@@ -563,11 +732,6 @@ body{
 .footer-link{
     max-width: 559px;
     width: 100%;
-    /* margin-right: 226px; */
-}
-
-.footer-main{
-    /* margin-right: 126px; */
 }
 
 .footer-logo{
@@ -657,6 +821,62 @@ body{
 margin-left: 15px;
 }
 
+.modal-overlay{
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+}
+
+.modal{
+    max-width: 550px;
+    text-align: center;
+    background-color: #F4F5F7;
+    padding: 50px 30px;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    cursor: pointer;
+}
+
+#up{
+    display: block;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 50px;
+    right: 50px;
+    background-color: #F3C6BD;
+    color: #F4F5F7;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#up span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    transform: rotate(-90deg) translate(80%, -30%);
+}
+
 @media screen and (max-width: 1200px){
     .container{
         max-width: 1040px;
@@ -704,6 +924,92 @@ margin-left: 15px;
         max-width: 750px;
     }
 
+    .checkbox, .check-wrapper{
+        display: block;
+    }
+
+    .header-nav{
+        display: none;
+    }
+
+    .main-container{
+        flex-direction: column;
+    }
+
+    .main-container > div:first-of-type{
+        z-index: 3;
+    }
+    
+    .main-container > div:last-of-type{
+        z-index: 3;
+        position: static;
+        right: 25px;
+    }
+    
+    .menu{
+        position: relative;
+    }
+
+    .check{
+        transition: 300ms;
+    }
+
+    .checkbox{
+        position: absolute;
+        width: 33px;
+        height: 33px;
+        top: 0;
+        right: 0;
+        margin: 0;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    .check-wrapper{
+        position: relative;
+        z-index: 1;
+    }
+
+    .checkbox:checked ~ .check-wrapper > .check:first-of-type{
+        transform: rotate(45deg) translate(13px, 8px);
+    }
+
+    .checkbox:checked ~ .check-wrapper > .check:nth-of-type(2){
+        opacity: 0;
+    }
+
+    .checkbox:checked ~ .check-wrapper > .check:last-of-type{
+        transform: rotate(-45deg) translate(2px, 3px);
+    }
+
+    .checkbox:checked ~ .header-nav{
+        display: block;
+        position: fixed;
+        background-color: #F3C6BD;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        padding-top: 35px;
+    }
+
+    .flex-menu{
+        flex-direction: column;
+    }
+
+    .header-li:first-of-type{
+        margin-right: 0;
+    }
+
+    .header-li{
+        margin-bottom: 20px;
+    }
+
+    .header-ul{
+        margin-right: 0;
+    }
+    
     .header{
         padding: 31px 0 25px;
     }
@@ -793,7 +1099,6 @@ margin-left: 15px;
         top: 258px;
     }
     
-
     .flex-team{
         flex-direction: column-reverse;
     }
@@ -858,6 +1163,39 @@ margin-left: 15px;
         margin-bottom: 0px;
     }
 
+    .slider{
+        position: static;
+        /* position: relative; */
+    }
+
+    .slider-flex{
+        flex-direction: row;
+    }
+    
+    .slider-title{
+        max-width: 573px;
+        width: 100%;
+        font-weight: 700;
+        margin: 0 auto 14px;
+    }
+    
+    .slider-text{
+        max-width: 574px;
+        width: 100%;
+    }
+    
+    .slider-block{
+        max-width: 175px;
+        margin: 0 auto 14px;
+    }
+    
+    .slider-image{
+        position: static;
+        max-width: 253px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
     .grid{
         text-align: center;
         margin: 0 auto; 
@@ -1133,6 +1471,29 @@ margin-left: 15px;
         padding: 35px 0 40px;
     }
 
+    .communicate{
+        padding: 53px 0 53px;
+    }
+
+    .communicate-flex, .communicate-block-flex{
+        flex-direction: column;
+    }
+
+    .communicate-image{
+        max-width: 430px;
+        width: 100%;
+        padding: 0 0 79px;
+    }
+
+    .communicate-button{
+        width: 160px;
+        margin-bottom: 40px;
+    }
+
+    .communicate-block{
+        max-width: 430px;
+    }
+
     .corporation-grid{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -1140,13 +1501,55 @@ margin-left: 15px;
         gap: 20px 20px;
     }
 
+    .hiring-about{
+        max-width: 430px;
+    }
+
+    .hiring{
+        padding: 53px 0 53px;
+    }
+    
+
+    .hiring-about-flex{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hiring-pretitle{
+        max-width: 200px;
+        width: 100%;
+        font-size: 22px;
+        line-height: 1.27;
+        margin-bottom: 18px;
+    }
+    
+    .hiring-pretitle-text{
+        max-width: 200px;
+        font-size: 16px;
+        line-height: 1.38;
+    }
+
+    .futures-image-leftside{
+        display: none;
+    }
+
+    .futures-image_img{
+        max-width: 430px;
+    }
+
+
     .visitor{
         padding: 40px 0 40px;
     }
 
     .visitor-grid{
-        gap: 5px 5px;
+        gap: 10px 2px;
     }
+
+    .visitor-block{
+        width: 245px;
+    }
+
 
     .trial-title{
         max-width: 250px;
@@ -1169,7 +1572,6 @@ margin-left: 15px;
     .button-main{
         width: 200px;
     }
-
 }
 
 @media screen and (max-width: 480px){
@@ -1196,21 +1598,85 @@ margin-left: 15px;
     }
 
     .corporation-grid{
-        display: grid;
-        grid-template-columns: repeat(3, 107px);
-        grid-template-rows: repeat(2, 94px);
-        gap: 5px 5px;
-        justify-content: space-between;
-    }
+            display: grid;
+            grid-template-columns: repeat(3, 107px);
+            grid-template-rows: repeat(2, 94px);
+            gap: 1px 1px;
+            box-shadow: inset -1px 0px 0px rgba(200, 200, 200, 0.5);
+        }
 
-    .container-image .container-image-img{
+    img.corporation-logo{
+        width: 80px;
+    }
+    
+
+    .futures{
+        margin: 0 auto; 
         max-width: 310px;
     }
+    
+    .futures-title{
+        margin-bottom: 17px;
+    }
+    
+    .futures-posttitle{
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    
+    .futures-text{
+        font-size: 24px;
+        line-height: 1.42;
+        color: #2B292D;
+        margin-bottom: 39px;
+    }
 
+    .futures-title, .futures-posttitle, .futures-text{
+        text-align: left;
+    }
+
+    .futures-image_img{
+        max-width: 310px;
+        width: 100%;
+    }
+
+    .futures-image-leftside{
+        display: none;
+    }
+
+
+    .container-image .container-image_img{
+        max-width: 310px;
+        width: 100%;
+    }
 
     .team{
         padding: 35px 0 40px;
     }
+
+    .inbox-response{
+        margin: 0 auto 48px;
+    }
+
+    .communicate{
+        padding: 53px 0 53px;
+    }
+
+    .communicate-flex, .communicate-block-flex{
+        flex-direction: column;
+    }
+
+    .communicate-image{
+        max-width: 310px;
+        width: 100%;
+        padding: 0 0 79px;
+    }
+
+    .communicate-button{
+        width: 160px;
+        margin-bottom: 40px;
+    }
+
 
     .visitor{
         padding: 30px 0 30px;
@@ -1232,6 +1698,30 @@ margin-left: 15px;
         gap: 15px;
     }
 
+    .hiring-about{
+        max-width: 310px;
+    }
+
+    .hiring-about-flex{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hiring-pretitle{
+        max-width: 200px;
+        width: 100%;
+        font-size: 22px;
+        line-height: 1.27;
+        margin-bottom: 18px;
+    }
+    
+    .hiring-pretitle-text{
+        max-width: 200px;
+        font-size: 16px;
+        line-height: 1.38;
+    }
+
+
     .button-main{
         width: 150px;
         height: 48px;
@@ -1248,10 +1738,9 @@ margin-left: 15px;
     }
 
     .trial-input{
-        max-width: 300px;
+        max-width: 310px;
         margin-bottom: 15px;
     }
-
 
 }
 
@@ -1323,12 +1812,70 @@ margin-left: 15px;
         text-align: center;
     }
 
+    .futures{
+        margin: 0 auto; 
+        max-width: 310px;
+    }
+    
+    .futures-title{
+        margin-bottom: 17px;
+    }
+    
+    .futures-posttitle{
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    
+    .futures-text{
+        font-size: 24px;
+        line-height: 1.42;
+        color: #2B292D;
+        margin-bottom: 39px;
+    }
+
+    .futures-title, .futures-posttitle, .futures-text{
+        text-align: left;
+    }
+
+    .futures-image_img{
+        max-width: 310px;
+        width: 100%;
+    }
+
+    .futures-image-leftside{
+        display: none;
+    }
+
+
     img.corporation-logo{
         width: 80px;
     }
 
     .flex-team{
         flex-direction: column;
+    }
+
+    .inbox-response{
+        margin: 0 auto 48px;
+    }
+
+    .communicate{
+        padding: 53px 0 53px;
+    }
+
+    .communicate-flex, .communicate-block-flex{
+        flex-direction: column;
+    }
+
+    .communicate-image{
+        max-width: 290px;
+        width: 100%;
+        padding: 0 0 79px;
+    }
+
+    .communicate-button{
+        width: 160px;
+        margin-bottom: 40px;
     }
 
     .visitor{
@@ -1363,7 +1910,7 @@ margin-left: 15px;
         margin-bottom: 30px;
     }
 
-    .container-image .container-image-img{
+    .container-image .container-image_img{
         max-width: 310px;
         width: 100%;
     }
@@ -1395,6 +1942,29 @@ margin-left: 15px;
         display: grid;
         grid-template-columns: repeat(1, 290px);
         gap: 15px;
+    }
+
+    .hiring-about{
+        max-width: 310px;
+    }
+
+    .hiring-about-flex{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hiring-pretitle{
+        max-width: 200px;
+        width: 100%;
+        font-size: 22px;
+        line-height: 1.27;
+        margin-bottom: 18px;
+    }
+    
+    .hiring-pretitle-text{
+        max-width: 200px;
+        font-size: 16px;
+        line-height: 1.38;
     }
 
     .grid-title{
@@ -1477,11 +2047,11 @@ margin-left: 15px;
         font-size: 24px;
         line-height: 34px;
         margin-bottom: 30px;  
-        }
+    }
 
-        .main-image{
+    .main-image{
             max-width: 290px;
-        }
+    }
 
     .main-ul{
         display: grid;
@@ -1535,11 +2105,12 @@ margin-left: 15px;
         text-align: left;
     }
 
-    .future-image-img{
+    .futures-image_img{
         max-width: 290px;
+        width: 100%;
     }
 
-    .future-image-leftside{
+    .futures-image-leftside{
         display: none;
     }
 
@@ -1571,9 +2142,41 @@ margin-left: 15px;
         margin-bottom: 30px;
     }
 
-    .container-image-img{
+    .container-image_img{
         max-width: 290px;
         width: 100%;
+    }
+
+    .inbox-response{
+        margin: 0 auto 48px;
+    }
+
+    .communicate{
+        padding: 53px 0 53px;
+    }
+
+
+    .communicate-flex{
+        flex-direction: column;
+    }
+
+    .communicate-block-flex{
+        flex-direction: column;
+    }
+
+    .communicate-posttitle{
+        font-size: 40px;
+        line-height: 1.0; 
+    }
+
+    .communicate-button{
+        width: 160px;
+    }
+
+    .communicate-image{
+        max-width: 290px;
+        width: 100%;
+        margin: 0 auto;
     }
 
     .visitor{
@@ -1604,6 +2207,55 @@ margin-left: 15px;
         grid-template-columns: repeat(1, 290px);
         gap: 15px;
     }
+
+    .slider-title{
+        text-align: left;
+        margin-bottom: 28px;
+    }
+    
+    .slider-text{
+        text-align: left;
+        margin: 0 auto 32px;
+    }
+    
+    .slider-block{
+        max-width: 225px;
+        margin-bottom: 42px;
+    }
+    
+    .slider-person{
+        text-align: left;
+    }
+    
+    .slider-work{
+        text-align:left;
+    }
+
+    .hiring-about-flex{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hiring-pretitle{
+        max-width: 200px;
+        width: 100%;
+        font-size: 22px;
+        line-height: 1.27;
+        margin-bottom: 18px;
+    }
+    
+    .hiring-pretitle-text{
+        max-width: 200px;
+        font-size: 16px;
+        line-height: 1.38;
+    }
+
+
+
+
+
+
+
 
     .grid-title{
         font-size: 40px;
