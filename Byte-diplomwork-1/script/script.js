@@ -6,5 +6,6 @@ $('.hiring-about >div').on('click', function(){
 
 $('.futures-subblock >div').on('click', function(){
     $(this).parent('.futures-subblock').toggleClass('futures-block-open')
+    $(this).children('.futures-block-title').toggleClass('futures-title-open')
     $(this).next('.futures-block-text').slideToggle(300);
 })
