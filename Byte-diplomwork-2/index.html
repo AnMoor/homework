@@ -9,21 +9,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat&family=Open+Sans:wght@400;700&family=Work+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js">
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="flex header-flex">
-                <div class="flex">
+                <div class="flex header-logo">
                     <img class="logo-image" src="./image/header/Combined shape 16724.png" alt="logo">
                     <img class="logo-text" src="./image/header/Petro.png" alt="logo">
                 </div>
                 <div class="">
-                        <ul class="header-ul flex">
+                    <ul class="header-ul flex">
                         <li class="header-li"><a class="header-link" href="#">Home</a></li>
-                        <li class="header-li"><a class="header-link" href="#">Adversite</a></li>
-                        <li class="header-li"><a class="header-link" href="#">Supports</a></li>
+                        <li class="header-li">
+                            <div class="flex menu-down">
+                                <div class="dropdown">
+                                    <button class="button-link">Adversite</button>
+                                    <div class="menu-child">
+                                        <a href="#">title1</a>
+                                        <a href="#">title2</a>
+                                        <a href="#">title3</a>
+                                        <a href="#">title4</a>
+                                        <a href="#">title5</a>
+                                    </div>
+                                </div>
+                                <p class="menu-down-icon">></p>
+                            </div>
+                        </li>
+                        <li class="header-li">
+                            <div class="flex menu-down">
+                                <div class="dropdown">
+                                    <button class="button-link">Supports</button>
+                                    <div class="menu-child">
+                                        <a href="#">title1</a>
+                                        <a href="#">title2</a>
+                                        <a href="#">title3</a>
+                                        <a href="#">title4</a>
+                                        <a href="#">title5</a>
+                                    </div>
+                                </div>
+                                <p class="menu-down-icon">></p>
+                            </div>
+                        </li>
                         <li class="header-li"><a class="header-link" href="#">Contact</a></li>
                     </ul>
                 </div>
@@ -31,9 +60,7 @@
                     <button class="button-one">Get Started</button>
                 </div>
             </div>
-
-
-            <div class="flex">
+            <div class="flex header-block">
                 <div>
                     <h1 class="header-title">Experience your ultimate mobile application</h1>
                     <p class="header-text">Get your blood tests delivered at let home collect sample from the victory of the managments that supplies best
@@ -41,8 +68,10 @@
                     </p>
                     <div class="flex">
                         <button class="button-two">Get Started</button>
-
-                        <video src="">Watch Video</video>
+                        <div class="flex header-video-block">
+                            <img src="./image/header/video.png" alt="play">
+                            <a class="header-video" href="https://youtu.be/Dxya5ucIroI" target="_blank">Watch Video</a>
+                        </div>
                     </div>
                     <div class="flex">
                         <p class="header-sponsor-text">Sponsored by:</p>
@@ -54,10 +83,12 @@
                 <div class="header-image">
                     <img src="./image/header/mockup.png" alt="smart">
                 </div>
+                <div class="header-pattern">
+                    <img src="./image/header/dot.png" alt="pattern">
+                </div>
             </div>
         </div>
     </header>
-
     <section class="features">
         <h3 class="features-pretitle">Quality features</h3>
         <h2 class="features-title">Meet exciting feature of app</h2>
@@ -206,7 +237,6 @@
             </div>
         </div>
     </section>
-
     <section class="meet">
         <h3 class="meet-pretitle">Testimunial</h3>
         <h2 class="meet-title">Meet Client Satisfaction</h2>
@@ -321,13 +351,11 @@
             </li>
         </ul>
         <div class="slider-button-block">
-            <button class="slider-button button-prev">prev</button>
+            <button class="slider-button-prev button-prev">prev</button>
             <button class="slider-button-next button-next">next</button>
         </div>
     </section>
-
     <section class="secure">
-        <!-- <img class="secure-background" src="./image/secure/Bg.png" alt="background"> -->
         <div class="flex container ">
             <img class="secure-background" src="./image/secure/Bg.png" alt="background">
 
@@ -340,11 +368,10 @@
             </div>
         </div>
     </section>
-
     <section class="works">
         <h3 class="works-pretitle">Whats the function</h3>
         <h2 class="works-title">Let's see how it works</h2>
-        <div class="flex">
+        <div class="flex works-flex">
             <div class="works-free-block">
                 <h3 class="works-free-title">Free Plan</h3>
                 <p class="works-free-text">For Small teams or office</p>
@@ -380,31 +407,30 @@
                         <h3 class="works-premium-title">Premium</h3>
                         <p class="works-premium-text">For startup enterprise</p>
                     </div>
-                    <div>
+                    <div class="works-sale-block">
                         <h3 class="works-price-title">Starting from</h3>
                         <p class="works-price-sum">49.99/mo</p>
                     </div>
                 </div>
-
                 <div class="works-premium-checkbox">
-                        <input type="checkbox2" name="bb" id="b1">
-                        <label class="works-premium-label" for="b1">Ultimate access to all course, exercises and assessments</label>
+                    <input type="checkbox" name="bb" id="b1">
+                    <label class="works-premium-label" for="b1">Ultimate access to all course, exercises and assessments</label>
                 </div>
                 <div class="works-premium-checkbox">
-                        <input type="checkbox2" name="bb" id="b2">
-                        <label class="works-premium-label" for="b2">Free acess for all kind of exercise corrections with downloads.</label>
+                    <input type="checkbox" name="bb" id="b2">
+                    <label class="works-premium-label" for="b2">Free acess for all kind of exercise corrections with downloads.</label>
                 </div>
                 <div class="works-premium-checkbox">  
-                        <input type="checkbox2" name="bb" id="b3">
-                        <label class="works-premium-label" for="b3">Total assessment corrections with free download access system</label>
+                    <input type="checkbox" name="bb" id="b3">
+                    <label class="works-premium-label" for="b3">Total assessment corrections with free download access system</label>
                 </div>
                 <div class="works-premium-checkbox"> 
-                          <input type="checkbox2" name="bb" id="b4">
-                          <label class="works-premium-label" for="b4">Unlimited download of courses on the mobile app contents</label>
+                    <input type="checkbox" name="bb" id="b4">
+                    <label class="works-premium-label" for="b4">Unlimited download of courses on the mobile app contents</label>
                 </div>
                 <div class="works-premium-checkbox"> 
-                        <input type="checkbox2" name="bb" id="b5">
-                        <label class="works-premium-label" for="b5">Download and print courses and exercises in PDF</label>
+                    <input type="checkbox" name="bb" id="b5">
+                    <label class="works-premium-label" for="b5">Download and print courses and exercises in PDF</label>
                 </div>
                 <div class="works-button">
                     <button class="works-premium-button">Signup Now</button>
@@ -412,12 +438,75 @@
             </div>
         </div>
     </section>
+    <section class="question container">
+        <h3 class="question-pretitle">Frequent Question</h3>
+        <h2 class="question-title">Do you have any question</h2>
+        <div class="question-item">
+            <div class="flex"> 
+                <p class="question-item-icon">+</p>
+                <h3 class="question-item-title">How to contact with riders emergency?</h3>
+            </div>
+            <p class="question-item-text">Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home.</p>
+        </div>
+        <div class="question-item">
+            <div class="flex">
+                <p class="question-item-icon">+</p>
+                <h3 class="question-item-title">App installation failed, how to update system information?</h3>
+            </div>
+            <p class="question-item-text">Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home.</p>
+        </div>
+        <div class="question-item">
+            <div class="flex">
+                <p class="question-item-icon">+</p>
+                <h3 class="question-item-title">Website reponse taking time, how to improve?</h3>
+            </div>
+            <p class="question-item-text">Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home.</p>
+        </div>
+        <div class="question-item">
+            <div class="flex">
+                <p class="question-item-icon">+</p>
+                <h3 class="question-item-title">New update fixed all bug and issues</h3>
+            </div>
+            <p class="question-item-text">Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home.</p>
+        </div>
+    </section>
 
-
-
-    
+    <footer class="footer container flex">
+        <div>
+            <h2 class="footer-title">About Us</h2>
+            <a class="footer-link" href="#">Support Center</a>
+            <a class="footer-link" href="#">Customer Support</a>
+            <a class="footer-link" href="#">About Us</a>
+            <a class="footer-link" href="#">Copyright</a>
+            <a class="footer-link" href="#">Popular Campaign</a>
+        </div>
+        <div>
+            <h2 class="footer-title">Our Information</h2>
+            <a class="footer-link" href="#">Return Policy</a>
+            <a class="footer-link" href="#">Privacy Policy</a>
+            <a class="footer-link" href="#">Terms & Conditions</a>
+            <a class="footer-link" href="#">Site Map</a>
+            <a class="footer-link" href="#">Store Hours</a>
+        </div>
+        <div>
+            <h2 class="footer-title">My Account</h2>
+            <a class="footer-link" href="#">Press inquiries</a>
+            <a class="footer-link" href="#">Social media</a>
+            <a class="footer-link" href="#">Directories</a>
+            <a class="footer-link" href="#">Images & B-roll</a>
+            <a class="footer-link" href="#">Permissions</a>
+        </div>
+        <div>
+            <h2 class="footer-title">Policy</h2>
+            <a class="footer-link" href="#">Application security</a>
+            <a class="footer-link" href="#">Software principles</a>
+            <a class="footer-link" href="#">Unwanted software policy</a>
+            <a class="footer-link" href="#">Responsible supply chain</a>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js" integrity="sha512-p55Bpm5gf7tvTsmkwyszUe4oVMwxJMoff7Jq3J/oHaBk+tNQvDKNz9/gLxn9vyCjgd6SAoqLnL13fnuZzCYAUA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script/bxslider.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 </html>
